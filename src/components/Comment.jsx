@@ -27,10 +27,10 @@ export const Comment = ({
             <span>{commentText}</span>
             <div className="d-flex align-items-center  gap-1">
               { likeNum > 0?<img src="/like.svg" width={20}></img>:""}
-              <span className="text-muted" >{likeNum} คน</span>
+              { likeNum > 0?<span className="text-muted" >{likeNum} คน</span>: ""}
               </div>
             </div>
-          <div>{replies.map((re) => (
+            <div>{replies.map((re) => (
           <Reply
           userImagePath = {re.userImagePath}
           key = {re.username}
